@@ -82,18 +82,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_shared_preferences) {
-            Intent intent=new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            finish();
-            // Handle the camera action
-        } else if (id == R.id.nav_file) {
-
-        } else if (id == R.id.nav_content_provider) {
-
-        } else if (id == R.id.nav_sqlite) {
-
+        switch (id){
+            case R.id.nav_shared_preferences:
+                startActivity(new Intent(this, LoginActivity.class));
+             break;
         }
+
+//        if (id == R.id.nav_shared_preferences) {
+//            Intent intent=new Intent(this, LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//            // Handle the camera action
+//        } else if (id == R.id.nav_file) {
+//
+//        } else if (id == R.id.nav_content_provider) {
+//
+//        } else if (id == R.id.nav_sqlite) {
+//
+//        }
 
 
 
