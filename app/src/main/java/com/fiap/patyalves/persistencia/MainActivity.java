@@ -1,5 +1,6 @@
 package com.fiap.patyalves.persistencia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -81,6 +83,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_shared_preferences) {
+            Intent intent=new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
             // Handle the camera action
         } else if (id == R.id.nav_file) {
 
